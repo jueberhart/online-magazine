@@ -20,8 +20,14 @@ for (let i = 0; i < navbarLinks.length; i++) {
  * scrollender Header und Back to Top button
  */
 
+const hui = new Audio("assets/hui.m4a");
+
 const header = document.querySelector("[data-header]");
 const backTopBtn = document.querySelector("[data-back-top-btn]");
+
+backTopBtn.addEventListener("click", function() {
+    hui.play();
+})
 
 window.addEventListener("scroll", function() {
     if(this.window.scrollY >= 200) {
